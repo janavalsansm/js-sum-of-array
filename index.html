@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of array elements</title>
+</head>
+<body>
+    
+    <div style="text-align: center; border: 2px solid black; border-radius: 8px; height: 280px; width: 400px;padding-top: 10px; float: inline-start;">
+        <h2>SUM OF ARRAY</h2>
+        <form style="margin-top: 40px;">
+                <label for="">Enter the numbers and add:</label>
+                <input type="text" id="num" placeholder="split the number using (+)"><br><br>
+                <button type="button" onclick="sumofarray()">SUM</button>
+        </form>
+        <p id="sum" style="font-weight: bolder; color: red;"></p>
+        </div>
+
+        <script>
+            function sumofarray(){
+                let num = document.getElementById("num").value;
+                let number = num.split("+").map(Number);
+                let sum = 0;
+                for(let i = 0; i < number.length ; i++){
+                    sum += number[i];
+                }
+                if(num == ""){
+                    alert("enter any value")
+                }else{
+                    document.getElementById("sum").innerHTML = "The sum is :"+"<br><br>"+ sum;
+                }
+            }
+        </script>
+    
+</body>
+</html>
